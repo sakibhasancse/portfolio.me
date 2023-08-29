@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from '@/node_modules/next/link'
 
 export default function Home() {
@@ -18,7 +19,14 @@ export default function Home() {
       </div>
 
       <div className="z-10 max-w-5xl w-full flex justify-center font-mono text-sm">
-        <img className="rounded-full w-96 h-96" src="sakib_image.jpeg" alt="Profile image sakib" />
+        <Image
+          height={500}
+          width={500}
+          className="rounded-full w-96 h-96"
+          src="/sakib_image.jpeg"
+          alt="Profile image sakib"
+          priority />
+        {/* <img className="rounded-full w-96 h-96" src="sakib_image.jpeg" alt="Profile image sakib" /> */}
       </div>
     </main>
   )
